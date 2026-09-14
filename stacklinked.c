@@ -1,42 +1,97 @@
-#include<stdio.h>
-#include<stdlib.h>
-struct node
+#include <stdio.h>
+#include <stdlib.h>
+struct Node
 {
-ind data;
-struct node*next;
+int data;
+struct Node* next;
 };
-struct node*top = null;
+struct Node* top = NULL;
 int isEmpty()
 {
-return top == null;
+return top == NULL;
 }
 void push(int value)
 {
-struct node*newNode = (struct node*)malloc(sizeof(struct node));
-if(newNode == null)
-{
-printf("stack overflow! cannot push %d.\n",value);
+struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+if (newNode == NULL) {
+printf("Stack Overflow! Cannot push %d.\n", value);
 return;
 }
-newnode->data=value;
-newnode->next=top;
-printf("%d pushed to stack.\n",value);
+newNode->data = value;
+newNode->next = top; 
+top = newNode; 
+printf("%d pushed to stack.\n", value);
 }
 void pop()
 {
-if(isEmpty())
+if (isEmpty())
 {
-printf("stack underflow! the stack is empty.\n");
+printf("Stack Underflow! The stack is empty.\n");
 return;
 }
-struct node*temp=top;
-printf("popped element:%d\n",top->data);
-top=top->next;
-free(temp);
+struct Node* temp = top; 
+printf("Popped element: %d\n", top->data);
+top = top->next; 
+free(temp); 
 }
 void peek()
 {
-if(isEmpty())
-printf("stack is empty.\n");
+if (isEmpty())
+printf("Stack is empty.\n");
 else
-printf("top element is:
+printf("Top element is: %d\n", top->data);
+}
+void display()
+{
+if (isEmpty())
+{
+printf("Stack is empty.\n");
+return;
+}
+struct Node* temp = top;
+printf("Stack elements (Top to Bottom): ");
+while (temp != NULL)
+{
+printf("%d -> ", temp->data);
+temp = temp->next;
+}
+printf("NULL\n");
+}
+int main()
+{
+int choice, value;
+printf("--- Stack Operations Using Linked List ---\n");
+while (1)
+{
+printf("\n1. Push\n2. Pop\n3. Peek\n4. Display\n5. Exit\n");
+printf("Enter your choice: ");
+scanf("%d", &choice);
+switch (choice)
+{
+case 1:
+printf("Enter value to push: ");
+scanf("%d", &value);
+push(value);
+break;
+case 2:
+pop();
+break;
+case 3:
+peek();
+break;
+case 4:
+display();
+break;
+case 5:
+printf("Exiting program...\n");
+
+while (!isEmpty()) {
+pop();
+}
+exit(0);
+default:
+printf("Invalid choice! Please choose between 1 and 5.\n");
+}
+}
+return 0;
+}
