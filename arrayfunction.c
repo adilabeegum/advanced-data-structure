@@ -1,4 +1,16 @@
+Aim: To access array elements and pass them to a function in C.
 
+Algorithm:
+
+Start.
+Declare and initialize an integer array.
+Define a function to display two integer values.
+Access the required array elements using their indices.
+Pass the elements to the function.
+Display the values.
+Stop.
+
+ 
 #include <stdio.h>
 void display(int age1, int age2)
 {
