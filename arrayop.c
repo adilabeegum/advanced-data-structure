@@ -1,3 +1,18 @@
+Aim: To perform insertion, deletion, searching, and updating operations on an array.
+
+Algorithm:
+
+Start.
+Read the size and elements of the array.
+Display the array.
+Read position and element, then perform insertion by shifting elements right.
+Read position and perform deletion by shifting elements left.
+Read an element and perform searching.
+Read position and new element and perform updating.
+Display the array after each operation.
+Stop.
+
+    
 #include<stdio.h>
 void main() {
     int a[100], i,j,n,pos,element;
