@@ -1,3 +1,16 @@
+Aim
+
+To write a C program to read and display the elements of a 2D array using a function.
+
+Algorithm
+Start.
+Declare a 2 × 2 integer array num.
+Read 4 numbers into the array using nested for loops.
+Pass the array to the displaynumbers() function.
+In the function, use nested for loops to access each element.
+Display all the elements of the array.
+Stop.
+
 #include <stdio.h>
 void displaynumbers(int num[2][2]);
 
