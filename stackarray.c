@@ -1,3 +1,16 @@
+Aim: To implement stack operations using an array in C.
+
+Algorithm:
+
+Start.
+Initialize top = -1.
+Display the stack operation menu.
+Read the choice.
+Perform Push, Pop, Peek, or Display according to the choice.
+Check Overflow during Push and Underflow during Pop.
+Repeat the menu until the user selects Exit.
+Stop.
+
 #include<stdio.h>
 #include <stdlib.h>
 #define MAX 5
