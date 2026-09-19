@@ -1,3 +1,16 @@
+Aim: To implement Stack operations using a Linked List in C.
+
+Algorithm:
+
+Start.
+Create a node with data and next.
+Initialize top = NULL.
+For Push, create a new node and insert it at the top.
+For Pop, remove the top node and free its memory.
+For Peek, display the data of the top node.
+Check for Overflow during memory allocation and Underflow when the stack is empty.
+Stop.
+  
 #include<stdio.h>
 #include<stdlib.h>
 struct node
