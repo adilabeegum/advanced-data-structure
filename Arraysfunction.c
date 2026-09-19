@@ -1,4 +1,4 @@
-Passing array elements to function
+
 #include <stdio.h>
 void display(int age1, int age2)
 {
