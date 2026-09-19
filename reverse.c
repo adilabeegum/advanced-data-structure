@@ -1,3 +1,18 @@
+Aim
+
+To write a C program to reverse the elements of an array.
+
+Algorithm
+Start.
+Declare and initialize an integer array.
+Find the size of the array.
+Pass the array and its size to the reversearray() function.
+Create a temporary array of the same size.
+Copy the elements of the original array into the temporary array in reverse order.
+Copy the elements of the temporary array back into the original array.
+Display the reversed array.
+Stop.
+
 #include<stdio.h>
 #include<stdlib.h>
  void reversearray(int arr[],int n){
