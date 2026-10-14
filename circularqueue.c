@@ -5,10 +5,8 @@ int items[SIZE];
 int front = -1;
 int rear = -1;
 int isFull() {
-
 if ((front == 0 && rear == SIZE - 1) || (rear + 1 == front)) {
 return 1;
-
 }
 return 0;
 }
